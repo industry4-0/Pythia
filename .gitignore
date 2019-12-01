@@ -1,0 +1,6 @@
+deeplearning_pipeline/src/*.pyc
+deeplearning_pipeline/src/__pycache__
+deeplearning_pipeline/venv
+deeplearning_pipeline/model
+deeplearning_pipeline/data
+

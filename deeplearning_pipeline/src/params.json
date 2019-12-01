@@ -1,0 +1,57 @@
+{
+ "train_lstm": {
+  "train_flag": true,
+  "batch_size": 512,
+  "epochs": 20,
+  "learning_rate": 0.001,
+  "activation": "relu",
+  "optimizer": "adam",
+  "lstm_units": [200, 100],
+  "dropouts": [0.5, 0.5],
+  "hyperparameter_search": false,
+  "num_hp_experiments": 2
+ },
+ "train_mlp": {
+  "batch_size": 1024,
+  "epochs": 70,
+  "learning_rate": 0.001,
+  "activation": "relu",
+  "optimizer": "adam",
+  "dense_units": [256, 128, 64, 32],
+  "dropouts": [0.2, 0.2, 0.3, 0.3],
+  "hyperparameter_search": false,
+  "num_hp_experiments": 2
+ },
+ "data_lstm": {
+  "data_dir": "data/raoula.csv",
+  "test_start_date": "2019-03-29",
+  "window_size": 100
+ },
+ "data_mlp": {
+  "data_dir": "data/raoula.csv",
+  "test_split": 0.3
+ },
+ "callbacks": {
+  "adaptive_learning_rate": false,
+  "adaptive_lr_patience_epochs": 1,
+  "adaptive_lr_decay": 0.2,
+  "min_adaptive_lr": 0.000001,
+  "exponential_lr": true,
+  "num_epochs_per_decay": 3,
+  "lr_decay_factor": 0.4,
+  "early_stopping": false,
+  "early_stopping_min_change": 0,
+  "early_stopping_patience_epochs": 10,
+  "save_model_per_epoch": false,
+  "epochs_per_save": 1,
+  "model_dir": "model"
+ },
+ "more": {
+   "save_final_model": true,
+   "final_model_dir": "model",
+   "results_to_csv": true,
+   "csv_path": "model",
+   "gpus": 0,
+   "fine-tuning-file": ""
+}
+}
