@@ -10,5 +10,5 @@ pydot
 scikit-learn
 scipy
 tensorboard==2.0.0
-tensorflow==2.0.0
+tensorflow==2.5.1
 tensorflow-estimator==2.0.0
